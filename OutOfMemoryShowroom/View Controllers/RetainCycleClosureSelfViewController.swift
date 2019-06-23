@@ -18,6 +18,9 @@ final class RetainCycleClosureSelfViewController: UIViewController {
 
         // This closure captures 'self' and generates a retain cycle
         closure = { self.label.textColor = .black }
+
+        // Allocates 1.2 GB of ram
+        _ = Data.init(repeating: 100, count: 1200000000)
     }
 
     deinit {
