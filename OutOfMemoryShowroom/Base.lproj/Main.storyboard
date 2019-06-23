@@ -58,6 +58,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="L6p-Fn-nCH"/>
                     <connections>
                         <outlet property="tableView" destination="shP-Bc-gEd" id="9QP-zY-TnY"/>
+                        <segue destination="KGQ-IE-94U" kind="push" id="tbW-Os-6Pr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,6 +82,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeE-4r-KKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="222" y="131"/>
+        </scene>
+        <!--Retain Cycle Closure Self-->
+        <scene sceneID="eu4-mu-co8">
+            <objects>
+                <viewController id="KGQ-IE-94U" customClass="RetainCycleClosureSelfViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HNt-dw-rgF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bCu-ea-8dt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Retain Cycle Closure Self" id="7AV-JJ-sn0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="131"/>
         </scene>
     </scenes>
 </document>
