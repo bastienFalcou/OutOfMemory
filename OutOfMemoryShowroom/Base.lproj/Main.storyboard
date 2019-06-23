@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5G-rS-PSR">
-                                <rect key="frame" x="20.5" y="424.5" width="373" height="101.5"/>
+                                <rect key="frame" x="20.5" y="108" width="373" height="101.5"/>
                                 <string key="text">This View Controller captures 'self' in a closure and generate a retain cycle.
 
 Close and open this View Controller to trigger a memory warning, and then crash the application. </string>
@@ -103,11 +103,18 @@ Close and open this View Controller to trigger a memory warning, and then crash 
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gZl-gT-bA8">
+                                <rect key="frame" x="0.0" y="236" width="414" height="660"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gZl-gT-bA8" secondAttribute="bottom" id="58M-wo-F0x"/>
+                            <constraint firstItem="gZl-gT-bA8" firstAttribute="leading" secondItem="bCu-ea-8dt" secondAttribute="leading" id="B6M-Xl-Jka"/>
+                            <constraint firstItem="R5G-rS-PSR" firstAttribute="top" secondItem="bCu-ea-8dt" secondAttribute="top" constant="20" id="FSg-bc-4C4"/>
                             <constraint firstItem="R5G-rS-PSR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bCu-ea-8dt" secondAttribute="leading" constant="20" id="UPO-W3-WVk"/>
-                            <constraint firstItem="R5G-rS-PSR" firstAttribute="centerY" secondItem="bCu-ea-8dt" secondAttribute="centerY" id="edL-PP-QiW"/>
+                            <constraint firstItem="gZl-gT-bA8" firstAttribute="top" secondItem="R5G-rS-PSR" secondAttribute="bottom" constant="26.5" id="Vgu-Ph-FtZ"/>
+                            <constraint firstItem="gZl-gT-bA8" firstAttribute="trailing" secondItem="bCu-ea-8dt" secondAttribute="trailing" id="WHe-fB-XJc"/>
                             <constraint firstItem="R5G-rS-PSR" firstAttribute="centerX" secondItem="bCu-ea-8dt" secondAttribute="centerX" id="sli-je-yFm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bCu-ea-8dt"/>
@@ -119,7 +126,7 @@ Close and open this View Controller to trigger a memory warning, and then crash 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="131"/>
+            <point key="canvasLocation" x="1892.753623188406" y="130.58035714285714"/>
         </scene>
     </scenes>
 </document>
