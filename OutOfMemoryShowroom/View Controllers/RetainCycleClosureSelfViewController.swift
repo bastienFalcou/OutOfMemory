@@ -16,15 +16,14 @@ final class RetainCycleClosureSelfViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // This closure captures 'self' and generates a retain cycle
-        closure = { self.label.textColor = .black }
+        closure = {
+            self.label.textColor = .black // Captures 'self' & generates a retain cycle
+        }
 
-        // Allocates 1.2 GB of ram
-        _ = Data.init(repeating: 100, count: 1200000000)
+        performExpensiveTask()
     }
 
     deinit {
-        // This print is not displayed because this view controller never deinited
-        print("RetainCycleClosureSelfViewController has been released")
+        print("VC Retain Cycle #1 has been released") // Not reached because view controller never deinited
     }
 }
