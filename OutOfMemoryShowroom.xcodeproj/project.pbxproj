@@ -14,6 +14,7 @@
 		1379F64D22BFBB0D0081AF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1379F64B22BFBB0D0081AF3C /* LaunchScreen.storyboard */; };
 		1379F65822BFC2540081AF3C /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65722BFC2540081AF3C /* MenuViewModel.swift */; };
 		1379F65A22BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65922BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift */; };
+		1379F65D22BFCC4F0081AF3C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65C22BFCC4F0081AF3C /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1379F64E22BFBB0D0081AF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1379F65722BFC2540081AF3C /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		1379F65922BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleClosureSelfViewController.swift; sourceTree = "<group>"; };
+		1379F65C22BFCC4F0081AF3C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1379F64622BFBB0C0081AF3C /* Main.storyboard */,
 				1379F65422BFBDB20081AF3C /* View Controllers */,
 				1379F65522BFBDBE0081AF3C /* View Models */,
+				1379F65B22BFCC320081AF3C /* Subclasses */,
 				1379F65622BFBDD60081AF3C /* Resources */,
 			);
 			path = OutOfMemoryShowroom;
@@ -92,6 +95,14 @@
 				1379F64E22BFBB0D0081AF3C /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1379F65B22BFCC320081AF3C /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				1379F65C22BFCC4F0081AF3C /* NavigationController.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			files = (
 				1379F65822BFC2540081AF3C /* MenuViewModel.swift in Sources */,
 				1379F64522BFBB0C0081AF3C /* MenuViewController.swift in Sources */,
+				1379F65D22BFCC4F0081AF3C /* NavigationController.swift in Sources */,
 				1379F65A22BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift in Sources */,
 				1379F64322BFBB0C0081AF3C /* AppDelegate.swift in Sources */,
 			);
