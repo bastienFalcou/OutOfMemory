@@ -20,7 +20,10 @@ extension MenuViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        fatalError()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.text = viewModel.options[indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
+        return cell
     }
 }
 

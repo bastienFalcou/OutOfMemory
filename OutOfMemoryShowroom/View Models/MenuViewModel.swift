@@ -13,6 +13,14 @@ final class MenuViewModel {
         case retainCycleClosureSelf
         case retainCycleClosureOther
         case retainCycleDelegate
+
+        var title: String {
+            switch self {
+            case .retainCycleClosureSelf: return "Retain cycle: closure #1"
+            case .retainCycleClosureOther: return "Retain cycle: closure #2"
+            case .retainCycleDelegate: return "Retain cycle: delegate"
+            }
+        }
     }
 
     var options: [OutOfMemoryType] {
