@@ -38,9 +38,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="KGQ-IE-94U" kind="show" identifier="showRetainCycleClosureSelfSegue" id="ohr-vO-Pxw"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -61,6 +58,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="L6p-Fn-nCH"/>
                     <connections>
                         <outlet property="tableView" destination="shP-Bc-gEd" id="9QP-zY-TnY"/>
+                        <segue destination="KGQ-IE-94U" kind="show" identifier="showRetainCycleClosureSelfSegue" id="3bR-xd-tSZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
