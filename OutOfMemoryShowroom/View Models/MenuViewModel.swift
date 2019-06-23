@@ -21,6 +21,13 @@ final class MenuViewModel {
             case .retainCycleDelegate: return "Retain cycle: delegate"
             }
         }
+
+        var segueIdentifier: String {
+            switch self {
+            case .retainCycleClosureSelf: return "showRetainCycleClosureSelfSegue"
+            default: fatalError("not implemented yet")
+            }
+        }
     }
 
     var options: [OutOfMemoryType] {
