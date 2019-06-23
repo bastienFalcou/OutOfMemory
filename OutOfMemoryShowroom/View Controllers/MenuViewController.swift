@@ -28,5 +28,9 @@ extension MenuViewController: UITableViewDataSource {
 }
 
 extension MenuViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch viewModel.options[indexPath.row] {
+        default: return
+        }
+    }
 }
