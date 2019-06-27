@@ -58,6 +58,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="L6p-Fn-nCH"/>
                     <connections>
                         <outlet property="tableView" destination="shP-Bc-gEd" id="9QP-zY-TnY"/>
+                        <segue destination="KGQ-IE-94U" kind="show" identifier="showRetainCycleClosureSelfSegue" id="3bR-xd-tSZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,13 +68,16 @@
         <!--Navigation Controller-->
         <scene sceneID="NaQ-dS-oxh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CG8-jt-2Sa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CG8-jt-2Sa" customClass="NavigationController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dH1-bx-Aa4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isRetainCycleSafetyEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tOI-Ff-3U7"/>
                     </connections>
@@ -81,6 +85,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeE-4r-KKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="222" y="131"/>
+        </scene>
+        <!--Retain Cycle Closure Self-->
+        <scene sceneID="eu4-mu-co8">
+            <objects>
+                <viewController id="KGQ-IE-94U" customClass="RetainCycleClosureSelfViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HNt-dw-rgF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5G-rS-PSR">
+                                <rect key="frame" x="20.5" y="424.5" width="373" height="101.5"/>
+                                <string key="text">This View Controller captures 'self' in a closure and generate a retain cycle.
+
+Close and open this View Controller to trigger a memory warning, and then crash the application. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R5G-rS-PSR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bCu-ea-8dt" secondAttribute="leading" constant="20" id="UPO-W3-WVk"/>
+                            <constraint firstItem="R5G-rS-PSR" firstAttribute="centerY" secondItem="bCu-ea-8dt" secondAttribute="centerY" id="edL-PP-QiW"/>
+                            <constraint firstItem="R5G-rS-PSR" firstAttribute="centerX" secondItem="bCu-ea-8dt" secondAttribute="centerX" id="sli-je-yFm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bCu-ea-8dt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Retain Cycle Closure Self" id="7AV-JJ-sn0"/>
+                    <connections>
+                        <outlet property="label" destination="R5G-rS-PSR" id="PUr-iy-u0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="131"/>
         </scene>
     </scenes>
 </document>
