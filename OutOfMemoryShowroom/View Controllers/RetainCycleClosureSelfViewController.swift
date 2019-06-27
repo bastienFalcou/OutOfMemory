@@ -16,12 +16,14 @@ final class RetainCycleClosureSelfViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // This closure captures 'self' and generates a retain cycle
-        closure = { self.label.textColor = .black }
+        closure = {
+            self.label.textColor = .black // Captures 'self' & generates a retain cycle
+        }
+
+        performExpensiveTask()
     }
 
     deinit {
-        // This print is not displayed because this view controller never deinited
-        print("RetainCycleClosureSelfViewController has been released")
+        print("VC Retain Cycle #1 has been released") // Not reached because view controller never deinited
     }
 }
