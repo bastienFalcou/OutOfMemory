@@ -121,7 +121,7 @@ Close and open this View Controller to trigger a memory warning, and then crash 
                     </view>
                     <navigationItem key="navigationItem" title="Retain Cycle Closure Self" id="7AV-JJ-sn0"/>
                     <connections>
-                        <outlet property="label" destination="R5G-rS-PSR" id="PUr-iy-u0K"/>
+                        <outlet property="mapView" destination="gZl-gT-bA8" id="X37-B1-ERa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
