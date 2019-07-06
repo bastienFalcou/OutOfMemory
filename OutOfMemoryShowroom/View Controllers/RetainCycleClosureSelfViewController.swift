@@ -6,10 +6,10 @@
 //  Copyright © 2019 Bastien Falcou. All rights reserved.
 //
 
-import UIKit
+import MapKit
 
 final class RetainCycleClosureSelfViewController: UIViewController {
-    @IBOutlet private var label: UILabel!
+    @IBOutlet private var mapView: MKMapView!
 
     private var closure: (() -> Void)?
 
@@ -17,10 +17,11 @@ final class RetainCycleClosureSelfViewController: UIViewController {
         super.viewDidLoad()
 
         closure = {
-            self.label.textColor = .black // Captures 'self' & generates a retain cycle
+            print(self.mapView.annotations) // Captures 'self' & generates a retain cycle
         }
 
         performExpensiveTask()
+        mapView.addLotsOfAnnotations()
     }
 
     deinit {
