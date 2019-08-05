@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131920B422F769CB000C5E0A /* RetainCycleFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131920B322F769CB000C5E0A /* RetainCycleFunctionViewController.swift */; };
 		1379F64322BFBB0C0081AF3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F64222BFBB0C0081AF3C /* AppDelegate.swift */; };
 		1379F64522BFBB0C0081AF3C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F64422BFBB0C0081AF3C /* MenuViewController.swift */; };
 		1379F64822BFBB0C0081AF3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1379F64622BFBB0C0081AF3C /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131920B322F769CB000C5E0A /* RetainCycleFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleFunctionViewController.swift; sourceTree = "<group>"; };
 		1379F63F22BFBB0C0081AF3C /* OutOfMemoryShowroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutOfMemoryShowroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1379F64222BFBB0C0081AF3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1379F64422BFBB0C0081AF3C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				1379F64422BFBB0C0081AF3C /* MenuViewController.swift */,
 				1379F65922BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift */,
+				131920B322F769CB000C5E0A /* RetainCycleFunctionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				1379F64522BFBB0C0081AF3C /* MenuViewController.swift in Sources */,
 				1379F65D22BFCC4F0081AF3C /* NavigationController.swift in Sources */,
 				1379F65A22BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift in Sources */,
+				131920B422F769CB000C5E0A /* RetainCycleFunctionViewController.swift in Sources */,
 				1379F65F22C011C40081AF3C /* UIViewControllerExtensions.swift in Sources */,
 				1379F64322BFBB0C0081AF3C /* AppDelegate.swift in Sources */,
 			);
