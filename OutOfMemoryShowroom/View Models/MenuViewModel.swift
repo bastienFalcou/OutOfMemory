@@ -13,18 +13,21 @@ final class MenuViewModel {
         case retainCycleClosureSelf
         case retainCycleClosureOther
         case retainCycleDelegate
+        case retainCycleFunction
 
         var title: String {
             switch self {
             case .retainCycleClosureSelf: return "Retain cycle: closure #1"
             case .retainCycleClosureOther: return "Retain cycle: closure #2"
             case .retainCycleDelegate: return "Retain cycle: delegate"
+            case .retainCycleFunction: return "Retain cycle: function"
             }
         }
 
         var segueIdentifier: String {
             switch self {
             case .retainCycleClosureSelf: return "showRetainCycleClosureSelfSegue"
+            case .retainCycleFunction: return "showRetainCycleFunctionSegue"
             default: fatalError("not implemented yet")
             }
         }
