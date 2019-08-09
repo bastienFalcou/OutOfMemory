@@ -18,6 +18,8 @@ final class RetainCycleFunctionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customView.onButtonPressed = handleButtonAction
+
+        print(UIApplication.shared.keyWindow?.rootViewController?.topDownHierarchyDescription ?? "none")
     }
 
     private func handleButtonAction() {

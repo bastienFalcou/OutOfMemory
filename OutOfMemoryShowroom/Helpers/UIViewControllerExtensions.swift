@@ -17,12 +17,16 @@ extension UIViewController {
     }
 
     var topDownHierarchyDescription: String? {
-        let baseString = "--\(String(describing: navigationController)):"
+        let baseString = "--\(String(describing: self)):"
 
         if let navigationController = self as? UINavigationController {
-            return baseString + navigationController.viewControllers
-                .map { "\n----\($0.topDownHierarchyDescription ?? "")" }
-                .joined(separator: "")
+            var prefix = "--"
+            var fullString = ""
+            for viewController in navigationController.viewControllers {
+                fullString += "\n\(prefix)\(viewController.topDownHierarchyDescription ?? "")"
+                prefix += "--"
+            }
+            return baseString + fullString
         }
         if let tabBarController = self as? UITabBarController {
             return baseString + (tabBarController.viewControllers?
@@ -37,7 +41,7 @@ extension UIViewController {
         if let presentedViewController = self.presentedViewController {
             return baseString + "\n----\(presentedViewController.topDownHierarchyDescription ?? "")"
         }
-        return nil
+        return baseString
     }
 }
 
