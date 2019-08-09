@@ -15,6 +15,30 @@ extension UIViewController {
             self?.performExpensiveTask()
         }
     }
+
+    var topDownHierarchyDescription: String? {
+        let baseString = "--\(String(describing: navigationController)):"
+
+        if let navigationController = self as? UINavigationController {
+            return baseString + navigationController.viewControllers
+                .map { "\n----\($0.topDownHierarchyDescription ?? "")" }
+                .joined(separator: "")
+        }
+        if let tabBarController = self as? UITabBarController {
+            return baseString + (tabBarController.viewControllers?
+                .map { "\n----\($0.topDownHierarchyDescription ?? "")" }
+                .joined(separator: "") ?? "")
+        }
+        if let splitViewController = self as? UISplitViewController {
+            return baseString + splitViewController.viewControllers
+                .map { "\n----\($0.topDownHierarchyDescription ?? "")" }
+                .joined(separator: "")
+        }
+        if let presentedViewController = self.presentedViewController {
+            return baseString + "\n----\(presentedViewController.topDownHierarchyDescription ?? "")"
+        }
+        return nil
+    }
 }
 
 extension MKMapView {
