@@ -78,7 +78,7 @@
                                 <rect key="frame" x="20" y="424.5" width="374" height="101.5"/>
                                 <string key="text">This View Controller captures 'self' in a closure and generate a retain cycle.
 
-Close and open this View Controller to trigger a memory warning, and then crash the application. </string>
+Close and open this View Controller multiple times to highlight the memory leak.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,34 +127,24 @@ Close and open this View Controller to trigger a memory warning, and then crash 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5G-rS-PSR">
-                                <rect key="frame" x="20.5" y="108" width="373" height="101.5"/>
+                                <rect key="frame" x="26.5" y="424.5" width="361" height="101.5"/>
                                 <string key="text">This View Controller captures 'self' in a closure and generate a retain cycle.
 
-Close and open this View Controller to trigger a memory warning, and then crash the application. </string>
+Close and open this View Controller multiple times to highlight the memory leak.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gZl-gT-bA8">
-                                <rect key="frame" x="0.0" y="236" width="414" height="660"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="gZl-gT-bA8" secondAttribute="bottom" id="58M-wo-F0x"/>
-                            <constraint firstItem="gZl-gT-bA8" firstAttribute="leading" secondItem="bCu-ea-8dt" secondAttribute="leading" id="B6M-Xl-Jka"/>
-                            <constraint firstItem="R5G-rS-PSR" firstAttribute="top" secondItem="bCu-ea-8dt" secondAttribute="top" constant="20" id="FSg-bc-4C4"/>
+                            <constraint firstItem="R5G-rS-PSR" firstAttribute="centerY" secondItem="bCu-ea-8dt" secondAttribute="centerY" id="PJ2-mO-bp2"/>
                             <constraint firstItem="R5G-rS-PSR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bCu-ea-8dt" secondAttribute="leading" constant="20" id="UPO-W3-WVk"/>
-                            <constraint firstItem="gZl-gT-bA8" firstAttribute="top" secondItem="R5G-rS-PSR" secondAttribute="bottom" constant="26.5" id="Vgu-Ph-FtZ"/>
-                            <constraint firstItem="gZl-gT-bA8" firstAttribute="trailing" secondItem="bCu-ea-8dt" secondAttribute="trailing" id="WHe-fB-XJc"/>
                             <constraint firstItem="R5G-rS-PSR" firstAttribute="centerX" secondItem="bCu-ea-8dt" secondAttribute="centerX" id="sli-je-yFm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bCu-ea-8dt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Retain Cycle Closure Self" id="7AV-JJ-sn0"/>
-                    <connections>
-                        <outlet property="mapView" destination="gZl-gT-bA8" id="X37-B1-ERa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

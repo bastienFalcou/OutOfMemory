@@ -3,8 +3,6 @@
 import MapKit
 
 final class RetainCycleClosureSelfViewController: UIViewController {
-    @IBOutlet private var mapView: MKMapView!
-
     private var closure: (() -> Void)?
 
     override func viewDidLoad() {
@@ -15,7 +13,6 @@ final class RetainCycleClosureSelfViewController: UIViewController {
         }
 
         performExpensiveTask()
-        mapView.addLotsOfAnnotations()
     }
 
     deinit {
