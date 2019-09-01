@@ -2,7 +2,7 @@
 
 import UIKit
 
-final class MenuViewController: UIViewController {
+class MenuViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
 
     private let viewModel = MenuViewModel()

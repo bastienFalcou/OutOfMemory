@@ -2,7 +2,7 @@
 
 import UIKit
 
-final class RetainCycleClosureSelfViewController: UIViewController {
+class RetainCycleClosureSelfViewController: UIViewController {
     private var closure: (() -> Void)?
 
     override func viewDidLoad() {
