@@ -27,6 +27,7 @@ final class MenuViewModel {
         var segueIdentifier: String {
             switch self {
             case .retainCycleClosureSelf: return "showRetainCycleClosureSelfSegue"
+            case .retainCycleClosureOther: return "showRetainCycleClosureOtherSegue"
             case .retainCycleFunction: return "showRetainCycleFunctionSegue"
             default: fatalError("not implemented yet")
             }

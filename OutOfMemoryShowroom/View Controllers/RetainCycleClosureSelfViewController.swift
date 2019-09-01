@@ -1,30 +1,20 @@
-//
-//  RetainCycleClosureSelfViewController.swift
-//  OutOfMemoryShowroom
-//
-//  Created by Bastien Falcou on 6/23/19.
 //  Copyright © 2019 Bastien Falcou. All rights reserved.
-//
 
-import MapKit
+import UIKit
 
 final class RetainCycleClosureSelfViewController: UIViewController {
-    @IBOutlet private var mapView: MKMapView!
-
     private var closure: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        performExpensiveTask()
 
         closure = {
-            print(self.mapView.annotations) // Captures 'self' & generates a retain cycle
+            print(self.description) // Captures 'self' & generates a retain cycle
         }
-
-        performExpensiveTask()
-        mapView.addLotsOfAnnotations()
     }
 
     deinit {
-        print("VC Retain Cycle #1 has been released") // Not reached because view controller never deinited
+        print("VC Retain Cycle #1 has been released")
     }
 }
