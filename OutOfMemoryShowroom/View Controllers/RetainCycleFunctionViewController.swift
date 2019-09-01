@@ -1,10 +1,4 @@
-//
-//  RetainCycleFunctionViewController.swift
-//  OutOfMemoryShowroom
-//
-//  Created by Bastien Falcou on 8/4/19.
 //  Copyright © 2019 Bastien Falcou. All rights reserved.
-//
 
 import UIKit
 
