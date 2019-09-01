@@ -2,11 +2,11 @@
 
 import UIKit
 
-final class View {
+class View {
     var onButtonPressed: (()-> Void)?
 }
 
-final class RetainCycleFunctionViewController: UIViewController {
+class RetainCycleFunctionViewController: UIViewController {
     private let customView = View()
 
     override func viewDidLoad() {

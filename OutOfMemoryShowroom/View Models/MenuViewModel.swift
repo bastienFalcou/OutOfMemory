@@ -28,8 +28,8 @@ final class MenuViewModel {
             switch self {
             case .retainCycleClosureSelf: return "showRetainCycleClosureSelfSegue"
             case .retainCycleClosureOther: return "showRetainCycleClosureOtherSegue"
+            case .retainCycleDelegate: return "showRetainCycleDelegateSegue"
             case .retainCycleFunction: return "showRetainCycleFunctionSegue"
-            default: fatalError("not implemented yet")
             }
         }
     }
