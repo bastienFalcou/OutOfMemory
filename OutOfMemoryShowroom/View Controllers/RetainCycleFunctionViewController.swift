@@ -11,10 +11,16 @@ final class RetainCycleFunctionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        customView.onButtonPressed = handleButtonAction
+        performExpensiveTask()
+
+        customView.onButtonPressed = handleButtonAction // Captures 'self' & generates a retain cycle
     }
 
     private func handleButtonAction() {
-        print(self.description) // Captures 'self' & generates a retain cycle
+        print(description)
+    }
+
+    deinit {
+        print("VC Retain Cycle #3 has been released")
     }
 }

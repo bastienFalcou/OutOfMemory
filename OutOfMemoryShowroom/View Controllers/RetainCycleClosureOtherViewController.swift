@@ -5,6 +5,7 @@ import UIKit
 class RetainCycleClosureOtherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        performExpensiveTask()
 
         let searchBarModel = SearchBarModel()
         let searchBar = SearchBar(viewModel: searchBarModel)
@@ -12,14 +13,11 @@ class RetainCycleClosureOtherViewController: UIViewController {
         searchBarModel.onReturn = {
             searchBar.backgroundColor = .red // Captures 'searchBar' & generates a retain cycle
         }
-
         view.addSubview(searchBar)
-
-        performExpensiveTask()
     }
 
     deinit {
-        print("VC Retain Cycle #2 has been released") // Not reached because view controller never deinited
+        print("VC Retain Cycle #2 has been released")
     }
 }
 

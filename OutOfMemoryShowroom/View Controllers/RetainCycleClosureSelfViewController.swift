@@ -7,15 +7,14 @@ final class RetainCycleClosureSelfViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        performExpensiveTask()
 
         closure = {
             print(self.description) // Captures 'self' & generates a retain cycle
         }
-
-        performExpensiveTask()
     }
 
     deinit {
-        print("VC Retain Cycle #1 has been released") // Not reached because view controller never deinited
+        print("VC Retain Cycle #1 has been released")
     }
 }
