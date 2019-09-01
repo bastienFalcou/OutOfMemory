@@ -10,15 +10,13 @@ import Foundation
 
 final class MenuViewModel {
     enum OutOfMemoryType: CaseIterable {
-        case retainCycleClosureSelf
-        case retainCycleClosureOther
+        case retainCycleClosure
         case retainCycleDelegate
         case retainCycleFunction
 
         var title: String {
             switch self {
-            case .retainCycleClosureSelf: return "Retain cycle: closure #1"
-            case .retainCycleClosureOther: return "Retain cycle: closure #2"
+            case .retainCycleClosure: return "Retain cycle: closure"
             case .retainCycleDelegate: return "Retain cycle: delegate"
             case .retainCycleFunction: return "Retain cycle: function"
             }
@@ -26,8 +24,7 @@ final class MenuViewModel {
 
         var segueIdentifier: String {
             switch self {
-            case .retainCycleClosureSelf: return "showRetainCycleClosureSelfSegue"
-            case .retainCycleClosureOther: return "showRetainCycleClosureOtherSegue"
+            case .retainCycleClosure: return "showRetainCycleClosureSegue"
             case .retainCycleDelegate: return "showRetainCycleDelegateSegue"
             case .retainCycleFunction: return "showRetainCycleFunctionSegue"
             }

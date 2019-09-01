@@ -60,7 +60,6 @@
                         <outlet property="tableView" destination="shP-Bc-gEd" id="9QP-zY-TnY"/>
                         <segue destination="KGQ-IE-94U" kind="show" identifier="showRetainCycleClosureSelfSegue" id="3bR-xd-tSZ"/>
                         <segue destination="P7f-Cc-aJa" kind="show" identifier="showRetainCycleFunctionSegue" id="wE6-tK-ehg"/>
-                        <segue destination="Z9l-WK-klB" kind="show" identifier="showRetainCycleClosureOtherSegue" id="0mp-1W-pqn"/>
                         <segue destination="pxI-1i-x2B" kind="show" identifier="showRetainCycleDelegateSegue" id="HLC-Wc-mgG"/>
                     </connections>
                 </viewController>
@@ -98,7 +97,7 @@ Close and open this View Controller multiple times to highlight the memory leak.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPl-Nr-WW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="967"/>
+            <point key="canvasLocation" x="222" y="966"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NaQ-dS-oxh">
@@ -151,39 +150,7 @@ Close and open this View Controller multiple times to highlight the memory leak.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="967"/>
-        </scene>
-        <!--Retain Cycle Closure Other-->
-        <scene sceneID="7ec-Xo-qxb">
-            <objects>
-                <viewController id="Z9l-WK-klB" customClass="RetainCycleClosureOtherViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QLk-c8-4fg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVs-1F-f9v">
-                                <rect key="frame" x="20" y="424.5" width="374" height="101.5"/>
-                                <string key="text">This View Controller captures 'self' in a closure and generate a retain cycle.
-
-Close and open this View Controller multiple times to highlight the memory leak.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="UVs-1F-f9v" firstAttribute="leading" secondItem="QLk-c8-4fg" secondAttribute="leading" constant="20" id="VCb-gx-AHU"/>
-                            <constraint firstItem="UVs-1F-f9v" firstAttribute="centerY" secondItem="IDM-qU-U4Q" secondAttribute="centerY" id="obT-Zl-xCc"/>
-                            <constraint firstItem="UVs-1F-f9v" firstAttribute="centerX" secondItem="IDM-qU-U4Q" secondAttribute="centerX" id="yvy-hk-zIW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="IDM-qU-U4Q"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Retain Cycle Closure Other" id="DpF-EO-Oql"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rv4-um-2o2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1474" y="967"/>
+            <point key="canvasLocation" x="1048" y="966"/>
         </scene>
         <!--Retain Cycle Delegate-->
         <scene sceneID="zF2-8P-ZfI">
@@ -215,7 +182,7 @@ Close and open this View Controller multiple times to highlight the memory leak.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruw-7C-jZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2290" y="967"/>
+            <point key="canvasLocation" x="1887" y="966"/>
         </scene>
     </scenes>
 </document>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		130A29B7231C4E0F00F95134 /* RetainCycleClosureOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A29B6231C4E0F00F95134 /* RetainCycleClosureOtherViewController.swift */; };
 		130A29B9231C5F9F00F95134 /* RetainCycleDelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A29B8231C5F9F00F95134 /* RetainCycleDelegateViewController.swift */; };
 		131920B422F769CB000C5E0A /* RetainCycleFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131920B322F769CB000C5E0A /* RetainCycleFunctionViewController.swift */; };
 		1379F64322BFBB0C0081AF3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F64222BFBB0C0081AF3C /* AppDelegate.swift */; };
@@ -16,13 +15,12 @@
 		1379F64A22BFBB0D0081AF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1379F64922BFBB0D0081AF3C /* Assets.xcassets */; };
 		1379F64D22BFBB0D0081AF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1379F64B22BFBB0D0081AF3C /* LaunchScreen.storyboard */; };
 		1379F65822BFC2540081AF3C /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65722BFC2540081AF3C /* MenuViewModel.swift */; };
-		1379F65A22BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65922BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift */; };
+		1379F65A22BFC6F00081AF3C /* RetainCycleClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65922BFC6F00081AF3C /* RetainCycleClosureViewController.swift */; };
 		1379F65D22BFCC4F0081AF3C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65C22BFCC4F0081AF3C /* NavigationController.swift */; };
 		1379F65F22C011C40081AF3C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379F65E22C011C40081AF3C /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		130A29B6231C4E0F00F95134 /* RetainCycleClosureOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleClosureOtherViewController.swift; sourceTree = "<group>"; };
 		130A29B8231C5F9F00F95134 /* RetainCycleDelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleDelegateViewController.swift; sourceTree = "<group>"; };
 		131920B322F769CB000C5E0A /* RetainCycleFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleFunctionViewController.swift; sourceTree = "<group>"; };
 		1379F63F22BFBB0C0081AF3C /* OutOfMemoryShowroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutOfMemoryShowroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +31,7 @@
 		1379F64C22BFBB0D0081AF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1379F64E22BFBB0D0081AF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1379F65722BFC2540081AF3C /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		1379F65922BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleClosureSelfViewController.swift; sourceTree = "<group>"; };
+		1379F65922BFC6F00081AF3C /* RetainCycleClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleClosureViewController.swift; sourceTree = "<group>"; };
 		1379F65C22BFCC4F0081AF3C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		1379F65E22C011C40081AF3C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +81,7 @@
 			children = (
 				1379F64422BFBB0C0081AF3C /* MenuViewController.swift */,
 				130A29B8231C5F9F00F95134 /* RetainCycleDelegateViewController.swift */,
-				1379F65922BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift */,
-				130A29B6231C4E0F00F95134 /* RetainCycleClosureOtherViewController.swift */,
+				1379F65922BFC6F00081AF3C /* RetainCycleClosureViewController.swift */,
 				131920B322F769CB000C5E0A /* RetainCycleFunctionViewController.swift */,
 			);
 			path = "View Controllers";
@@ -192,11 +189,10 @@
 				1379F64522BFBB0C0081AF3C /* MenuViewController.swift in Sources */,
 				130A29B9231C5F9F00F95134 /* RetainCycleDelegateViewController.swift in Sources */,
 				1379F65D22BFCC4F0081AF3C /* NavigationController.swift in Sources */,
-				1379F65A22BFC6F00081AF3C /* RetainCycleClosureSelfViewController.swift in Sources */,
+				1379F65A22BFC6F00081AF3C /* RetainCycleClosureViewController.swift in Sources */,
 				131920B422F769CB000C5E0A /* RetainCycleFunctionViewController.swift in Sources */,
 				1379F65F22C011C40081AF3C /* UIViewControllerExtensions.swift in Sources */,
 				1379F64322BFBB0C0081AF3C /* AppDelegate.swift in Sources */,
-				130A29B7231C4E0F00F95134 /* RetainCycleClosureOtherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
