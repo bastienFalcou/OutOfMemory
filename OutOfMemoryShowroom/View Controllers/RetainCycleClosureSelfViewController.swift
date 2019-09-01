@@ -1,6 +1,6 @@
 //  Copyright © 2019 Bastien Falcou. All rights reserved.
 
-import MapKit
+import UIKit
 
 final class RetainCycleClosureSelfViewController: UIViewController {
     private var closure: (() -> Void)?
@@ -9,7 +9,7 @@ final class RetainCycleClosureSelfViewController: UIViewController {
         super.viewDidLoad()
 
         closure = {
-            print(self.mapView.annotations) // Captures 'self' & generates a retain cycle
+            print(self.description) // Captures 'self' & generates a retain cycle
         }
 
         performExpensiveTask()

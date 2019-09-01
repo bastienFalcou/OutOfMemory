@@ -60,13 +60,14 @@
                         <outlet property="tableView" destination="shP-Bc-gEd" id="9QP-zY-TnY"/>
                         <segue destination="KGQ-IE-94U" kind="show" identifier="showRetainCycleClosureSelfSegue" id="3bR-xd-tSZ"/>
                         <segue destination="P7f-Cc-aJa" kind="show" identifier="showRetainCycleFunctionSegue" id="wE6-tK-ehg"/>
+                        <segue destination="Z9l-WK-klB" kind="show" identifier="showRetainCycleClosureOtherSegue" id="0mp-1W-pqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="130.58035714285714"/>
         </scene>
-        <!--Retain Cycle Function View Controller-->
+        <!--Retain Cycle Function-->
         <scene sceneID="CZB-BM-Sxl">
             <objects>
                 <viewController id="P7f-Cc-aJa" customClass="RetainCycleFunctionViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,10 +93,11 @@ Close and open this View Controller multiple times to highlight the memory leak.
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6g-yB-mD2"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Retain Cycle Function" id="ieY-d6-Ecs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPl-Nr-WW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003" y="131"/>
+            <point key="canvasLocation" x="61" y="968"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NaQ-dS-oxh">
@@ -148,7 +150,39 @@ Close and open this View Controller multiple times to highlight the memory leak.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTI-AA-AQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="-599"/>
+            <point key="canvasLocation" x="1048" y="968"/>
+        </scene>
+        <!--Retain Cycle Closure Other-->
+        <scene sceneID="7ec-Xo-qxb">
+            <objects>
+                <viewController id="Z9l-WK-klB" customClass="RetainCycleClosureOtherViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QLk-c8-4fg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVs-1F-f9v">
+                                <rect key="frame" x="20" y="424.5" width="374" height="101.5"/>
+                                <string key="text">This View Controller captures 'self' in a closure and generate a retain cycle.
+
+Close and open this View Controller multiple times to highlight the memory leak.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UVs-1F-f9v" firstAttribute="leading" secondItem="QLk-c8-4fg" secondAttribute="leading" constant="20" id="VCb-gx-AHU"/>
+                            <constraint firstItem="UVs-1F-f9v" firstAttribute="centerY" secondItem="IDM-qU-U4Q" secondAttribute="centerY" id="obT-Zl-xCc"/>
+                            <constraint firstItem="UVs-1F-f9v" firstAttribute="centerX" secondItem="IDM-qU-U4Q" secondAttribute="centerX" id="yvy-hk-zIW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IDM-qU-U4Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Retain Cycle Closure Other" id="DpF-EO-Oql"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rv4-um-2o2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2051" y="968"/>
         </scene>
     </scenes>
 </document>
