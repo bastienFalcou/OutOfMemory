@@ -185,10 +185,10 @@ Close and open this View Controller multiple times to highlight the memory leak.
             </objects>
             <point key="canvasLocation" x="1474" y="967"/>
         </scene>
-        <!--Retain Cycle Closure Other-->
+        <!--Retain Cycle Delegate-->
         <scene sceneID="zF2-8P-ZfI">
             <objects>
-                <viewController id="pxI-1i-x2B" customClass="RetainCycleClosureOtherViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pxI-1i-x2B" customClass="RetainCycleDelegateViewController" customModule="OutOfMemoryShowroom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3XF-t9-0XN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@ Close and open this View Controller multiple times to highlight the memory leak.
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yP7-Be-yFe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Retain Cycle Closure Other" id="jzm-t4-tmD"/>
+                    <navigationItem key="navigationItem" title="Retain Cycle Delegate" id="jzm-t4-tmD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruw-7C-jZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
